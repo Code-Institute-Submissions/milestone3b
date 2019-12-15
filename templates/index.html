@@ -1,13 +1,18 @@
-<html>
-    <head>
+{% extends 'base.html' %}
+{% block content %}
 
-    </head>
-    <body>
-        {% for pun in puns %}
-            {{pun.expression}}
-            {{pun.category}}
-            {{pun.definition}}
-            {{pun.example}}
-        {% endfor %}
-    </body>
-</html>
+<ul class="collapsible">
+	{% for pun in puns %}
+	<li>
+		<div class="collapsible-header"><i class="material-icons">expand_more</i><b>{{pun.expression}}</b>- {{pun.category}}</div>
+		<div class="collapsible-body">
+            <span>
+               <p> {{pun.definition}} </p>
+               <p>Example Useage: "{{pun.example}}." </p>
+            </span>
+        </div>
+	</li>
+	{% endfor %}
+</ul>
+
+{% endblock %}

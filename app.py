@@ -14,8 +14,17 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/get_puns')
 def get_puns():
-    return render_template("index.html", puns=mongo.db.tasks.find())
+    return render_template("index.html", puns=mongo.db.puns.find())
 
+@app.route('/add_pun') #opens up the page for submitting a pun
+def add_pun():
+    return render_template("addpun.html")
+
+@app.route('/submit_pun', methods=['POST']) #posts data collected on the submit.html form to mongodb, then redirects to index.html
+def submit_pun():
+    puns=mongo.db.puns
+    puns.insert_one(request.form.to_dict())
+    return redirect(url_for('get_puns'))
 
 if __name__ == '__main__':
     app.run(host=os.getenv("IP", "0.0.0.0"),
