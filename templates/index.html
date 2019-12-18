@@ -4,11 +4,16 @@
 <ul class="collapsible">
 	{% for pun in puns %}
 	<li>
-		<div class="collapsible-header"><i class="material-icons">expand_more</i><b>{{pun.expression}}</b>- {{pun.category}}</div>
+		<div class="collapsible-header">
+            <i class="material-icons">expand_more</i>
+            <b>{{pun.expression}}</b>
+            <a class="edit waves-effect waves-light btn btn_small blue">Edit</a>
+        </div>
 		<div class="collapsible-body">
             <span>
                <p> {{pun.definition}} </p>
                <p>Example Useage: "{{pun.example}}." </p>
+               <a class="more">more..</a>
             </span>
         </div>
 	</li>
