@@ -20,11 +20,16 @@ def get_puns():
 def add_pun():
     return render_template("addpun.html")
 
-@app.route('/submit_pun', methods=['POST']) #posts data collected on the submit.html form to mongodb, then redirects to index.html
+@app.route('/submit_pun', methods=['POST']) #posts data collected on the addpun.html form to mongodb, then redirects to index.html
 def submit_pun():
     puns=mongo.db.puns
     puns.insert_one(request.form.to_dict())
     return redirect(url_for('get_puns'))
+
+@app.route('/profile/<pun_id>')
+def profile(pun_id):
+    the_pun =  mongo.db.puns.find_one({"_id": ObjectId(pun_id)})
+    return render_template('profile.html', pun=the_pun)
 
 if __name__ == '__main__':
     app.run(host=os.getenv("IP", "0.0.0.0"),

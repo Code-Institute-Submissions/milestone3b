@@ -13,7 +13,7 @@
             <span>
                <p> {{pun.definition}} </p>
                <p>Example Useage: "{{pun.example}}." </p>
-               <a class="more">more..</a>
+               <a class="more" href="{{url_for('profile', pun_id=pun._id)}}">more..</a>
             </span>
         </div>
 	</li>
