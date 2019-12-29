@@ -31,6 +31,23 @@ def profile(pun_id):
     the_pun =  mongo.db.puns.find_one({"_id": ObjectId(pun_id)})
     return render_template('profile.html', pun=the_pun)
 
+@app.route('/edit_pun/<pun_id>')
+def edit_pun(pun_id):
+    the_pun =  mongo.db.puns.find_one({"_id": ObjectId(pun_id)})
+    return render_template('editpun.html', pun=the_pun)
+
+@app.route('/update_pun/<pun_id>', methods=['POST'])
+def update_pun(pun_id):
+    puns = mongo.db.puns
+    puns.update({'_id': ObjectId(pun_id)},
+    {
+        'expression': request.form.get('expression'),
+        'definition': request.form.get('definition'),
+        'example': request.form.get('example'),
+        'category': request.form.get('category')
+    })
+    return redirect(url_for('get_puns'))
+
 if __name__ == '__main__':
     app.run(host=os.getenv("IP", "0.0.0.0"),
         port=int(os.getenv("PORT", "8080")), debug=True)

@@ -1,0 +1,38 @@
+{% extends 'base.html'%} {% block content %}
+
+<h3>Edit Pun</h3>
+<div class="row">
+    <form action="{{ url_for('update_pun', pun_id=pun._id) }}" method="POST"  class="col s12">
+        <div class="row">
+			<div class="input-field col-sm-12">
+				<i class="material-icons prefix">title</i>
+				<input id="expression" name="expression" type="text" class="validate">
+				<label for="icon_prefix">{{pun.expression}}</label>
+			</div>
+			<div class="input-field col-sm-12">
+				<i class="material-icons prefix">edit</i>
+				<input id="definition" name="definition" type="tel" class="validate">
+				<label for="icon_telephone">{{pun.definition}}</label>
+			</div>
+			<div class="input-field col-sm-12">
+				<i class="material-icons prefix">subdirectory_arrow_right</i>
+				<input id="example" name="example" type="tel" class="validate">
+				<label for="icon_telephone">{{pun.example}}</label>
+			</div>
+            <div class="input-field col-sm-12">
+                <i class="material-icons prefix">storage</i>
+                <select>
+                    <option value="{{pun.category}}" selected>{{pun.category}}</option>
+                    <option value="1">adjective</option>
+                    <option value="2">adverb</option>
+                    <option value="3">noun</option>
+                    <option value="4">verb</option>
+                </select>
+            </div>
+		</div>
+		<button class="btn waves-effect waves-light" type="submit" name="action">Edit this Pun
+        <i class="material-icons right">send</i>
+        </button>
+	</form>
+</div>
+{% endblock %}
