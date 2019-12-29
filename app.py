@@ -48,6 +48,11 @@ def update_pun(pun_id):
     })
     return redirect(url_for('get_puns'))
 
+@app.route('/delete_pun/<pun_id>')
+def delete_pun(pun_id):
+    mongo.db.puns.remove({'_id': ObjectId(pun_id)})
+    return redirect(url_for('get_puns'))
+
 if __name__ == '__main__':
     app.run(host=os.getenv("IP", "0.0.0.0"),
         port=int(os.getenv("PORT", "8080")), debug=True)
