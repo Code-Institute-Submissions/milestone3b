@@ -1,7 +1,6 @@
-.container{
-    width: 60%;
+nav{
+    background-color: #32a864;
 }
-
 .collapsible_header {
     margin-top: 5px;
 }
@@ -29,3 +28,14 @@
     margin-right: 5px;
 }
 
+.format-helper{
+    padding:0;
+}
+
+@media only screen and (min-width: 801px) .container{
+    width: 60%;
+}
+
+@media only screen and (max-width: 400px) .container{
+    width: 100%;
+}

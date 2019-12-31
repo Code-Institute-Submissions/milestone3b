@@ -5,18 +5,26 @@
 	{% for pun in puns %}
 	<li>
 		<div class="collapsible-header">
-            <i class="material-icons index-icons">expand_more</i>
-            <a class="edit waves-effect waves-light btn btn_small blue" href="{{url_for('edit_pun', pun_id=pun._id)}}">Edit</a>
-            <a class="edit waves-effect waves-light btn btn_small red" href="{{url_for('delete_pun', pun_id=pun._id)}}">Delete</a>
-            <b class="pun-title">{{pun.expression}}</b>
-        </div>
+			<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 format-helper">
+				<i class="material-icons index-icons">expand_more</i>
+			</div>
+			<div class="col-xs-9 col-sm-9 col-md-8 col-lg-8 format-helper">
+				<b class="pun-title">{{pun.expression}}</b>
+			</div>
+            <div class="col-xs-2 col-sm-2 col-md-3 col-lg-3 format-helper">
+				<a class="edit waves-effect waves-light btn btn_small blue"
+					href="{{url_for('edit_pun', pun_id=pun._id)}}">Edit</a>
+				<a class="edit waves-effect waves-light btn btn_small red"
+					href="{{url_for('delete_pun', pun_id=pun._id)}}">Delete</a>
+			</div>
+		</div>
 		<div class="collapsible-body">
-            <span>
+			<span>
                <p> {{pun.definition}} </p>
                <p>Example Useage: "{{pun.example}}." </p>
                <a class="more" href="{{url_for('profile', pun_id=pun._id)}}">more..</a>
             </span>
-        </div>
+		</div>
 	</li>
 	{% endfor %}
 </ul>
