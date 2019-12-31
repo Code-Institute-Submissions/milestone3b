@@ -1,10 +1,20 @@
+.container{
+    width: 60%;
+}
+
 .collapsible_header {
     margin-top: 5px;
 }
 
+.index-icons, .pun-title{
+    line-height: 24px;
+    margin: 5px 5px;
+    padding: 0 0.5em;
+}
+
 .btn_small {
     height: 24px;
-    width: 60px;
+    width: 70px;
     line-height: 24px;
     margin: 5px 5px;
     padding: 0 0.5em;
@@ -13,3 +23,9 @@
 .more{
     float: right;
 }
+
+.brand-logo{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
