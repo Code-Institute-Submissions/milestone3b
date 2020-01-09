@@ -1,24 +1,54 @@
 {% extends 'base.html' %}
 {% block content %}
 
-  <div class="row">
-    <div class="col s12 m6">
-      <div class="card white darken-1">
-        <div class="card-content">
-          <span class="card-title">Welcome</span>
-          <p>to Suburban Dictionary<br>
+<div class="row">
+<div class="row col-sm-12 col-md-4 col-lg-4">
+	<div class="col s12 m6">
+		<div class="card white darken-1">
+			<div class="card-content">
+				<span class="card-title">Welcome</span>
+				<p>to Suburban Dictionary<br>
            a simple website that lists user-submitted puns and play on words.<br>
            Why not add to the fun and submit your own pun here?</p>
+			</div>
+			<div class="card-action">
+				<a class="edit waves-effect waves-light btn btn_small green" href="{{url_for('add_pun')}}">Submit</a>
+			</div>
+		</div>
+		<div class="row">
+            <div id="adjectives-slider" class="switch col-xs-6 col-sm-6 col-md-12 col-lg-12">
+			    <label>  
+                <input type="checkbox">
+                <span class="lever"></span>
+                    Adjectives
+                </label>
+            </div>
+            <div id="adverbs-slider" class="switch col-xs-6 col-sm-6 col-md-12 col-lg-12">
+                <label>
+                <input type="checkbox">
+                <span class="lever"></span>
+                    Adverbs
+                </label>
+            </div>
+            <div id="nouns-slider" class="switch col-xs-6 col-sm-6 col-md-12 col-lg-12">
+                <label>  
+                <input type="checkbox">
+                <span class="lever"></span>
+                    Nouns
+                </label>
+            </div>
+            <div id="verbs-slider" class="switch col-xs-6 col-sm-6 col-md-12 col-lg-12">
+                <label> 
+                <input type="checkbox">
+                <span class="lever"></span>
+                    Verbs
+                </label>
+            </div>
         </div>
-        <div class="card-action">
-          <a class="edit waves-effect waves-light btn btn_small green"
-					href="{{url_for('add_pun')}}">Submit</a>
-        </div>
-      </div>
-    </div>
-  </div>
+	</div>
+</div>
 
-<ul class="collapsible">
+<ul class="collapsible col-sm-12 col-md-8 col-lg-8">
 	{% for pun in puns %}
 	<li>
 		<div class="collapsible-header">
@@ -28,7 +58,7 @@
 			<div class="col-xs-9 col-sm-9 col-md-8 col-lg-8 format-helper">
 				<b class="pun-title">{{pun.expression}}</b>
 			</div>
-            <div class="col-xs-2 col-sm-2 col-md-3 col-lg-3 format-helper">
+			<div class="col-xs-2 col-sm-2 col-md-3 col-lg-3 format-helper">
 				<a class="edit waves-effect waves-light btn btn_small blue"
 					href="{{url_for('edit_pun', pun_id=pun._id)}}">Edit</a>
 				<a class="edit waves-effect waves-light btn btn_small red"
@@ -45,5 +75,5 @@
 	</li>
 	{% endfor %}
 </ul>
-
+</div>
 {% endblock %}

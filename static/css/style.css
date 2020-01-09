@@ -1,6 +1,26 @@
 nav{
     background-color: #32a864;
 }
+
+.container{
+    padding:0px;
+}
+.row{
+    padding: 0px;
+    margin-left: 0px;
+    margin-right:0px;
+    margin-bottom: 0px;
+}
+
+.switch>label{
+    color:black;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.collapsible{
+    padding: 0px;
+}
 .collapsible_header {
     margin-top: 5px;
 }
@@ -32,10 +52,10 @@ nav{
     padding:0;
 }
 
-@media only screen and (min-width: 801px) .container{
+/*@media only screen and (min-width: 801px) .container{
     width: 60%;
 }
 
 @media only screen and (max-width: 400px) .container{
     width: 100%;
-}
+}*/
