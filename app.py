@@ -6,6 +6,7 @@ from os import path
 if path.exists("env.py"):
     import MONGO_URI
 #from env import MONGO_URI
+MONGO_URI = os.environ.get('MONGO_URI')
 
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'suburbanDictionary'
