@@ -52,10 +52,15 @@ nav{
     padding:0;
 }
 
-/*@media only screen and (min-width: 801px) .container{
-    width: 60%;
+.is-animated {
+  animation: .6s zoom-in;
 }
 
-@media only screen and (max-width: 400px) .container{
-    width: 100%;
-}*/
+@keyframes zoom-in {
+  0% {
+   transform: scale(.1);
+  } 
+  100% {
+    transform: none;
+  }
+}

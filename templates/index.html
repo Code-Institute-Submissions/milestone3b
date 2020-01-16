@@ -15,29 +15,36 @@
 				<a class="edit waves-effect waves-light btn btn_small green" href="{{url_for('add_pun')}}">Submit</a>
 			</div>
 		</div>
-		<div class="row">
-            <div id="adjectives-slider" class="switch col-xs-6 col-sm-6 col-md-12 col-lg-12">
+		<div class="row filter">
+            <div id="all-slider" data-filter="all" class="switch col-xs-6 col-sm-6 col-md-12 col-lg-12">
+			    <label>  
+                <input type="checkbox" checked>
+                <span class="lever"></span>
+                    All
+                </label>
+            </div>
+            <div id="adjectives-slider" data-filter="adjective" class="switch col-xs-6 col-sm-6 col-md-12 col-lg-12">
 			    <label>  
                 <input type="checkbox">
                 <span class="lever"></span>
                     Adjectives
                 </label>
             </div>
-            <div id="adverbs-slider" class="switch col-xs-6 col-sm-6 col-md-12 col-lg-12">
+            <div id="adverbs-slider" data-filter="adverb" class="switch col-xs-6 col-sm-6 col-md-12 col-lg-12">
                 <label>
                 <input type="checkbox">
                 <span class="lever"></span>
                     Adverbs
                 </label>
             </div>
-            <div id="nouns-slider" class="switch col-xs-6 col-sm-6 col-md-12 col-lg-12">
+            <div id="nouns-slider" data-filter="noun" class="switch col-xs-6 col-sm-6 col-md-12 col-lg-12">
                 <label>  
                 <input type="checkbox">
                 <span class="lever"></span>
                     Nouns
                 </label>
             </div>
-            <div id="verbs-slider" class="switch col-xs-6 col-sm-6 col-md-12 col-lg-12">
+            <div id="verbs-slider" data-filter="verb" class="switch col-xs-6 col-sm-6 col-md-12 col-lg-12">
                 <label> 
                 <input type="checkbox">
                 <span class="lever"></span>
@@ -50,8 +57,8 @@
 
 <ul class="collapsible col-sm-12 col-md-8 col-lg-8">
 	{% for pun in puns %}
-	<li>
-		<div class="collapsible-header">
+	<li class="pun">
+		<div class="collapsible-header" data-category="{{pun.category}}">
 			<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 format-helper">
 				<i class="material-icons index-icons">expand_more</i>
 			</div>
@@ -71,7 +78,7 @@
                <p>Example Useage: "{{pun.example}}." </p>
                <a class="more" href="{{url_for('profile', pun_id=pun._id)}}">more..</a>
             </span>
-		</div>
+        </div>
 	</li>
 	{% endfor %}
 </ul>
