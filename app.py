@@ -3,10 +3,10 @@ from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from os import path
-if path.exists("env.py"):
-    import MONGO_URI
-#from env import MONGO_URI
-MONGO_URI = os.environ.get('MONGO_URI')
+#if path.exists("env.py"):
+#    from env import MONGO_URI
+from env import MONGO_URI
+#MONGO_URI = os.environ.get('MONGO_URI')
 
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'suburbanDictionary'
