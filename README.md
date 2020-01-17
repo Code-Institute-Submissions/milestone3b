@@ -26,14 +26,14 @@ and in the "About" Card.
 
 ### Wireframes:
 
-![](/images/Milestone 3 Wireframes Index Page.png)
+![](/images/wireframes-index.png)
 
 Here I've gone for a simple, clean layout using the materialize framework
 Puns are displayed list-wise in an accordion format, hat expands to display a defintion and example.
 There are also boldly-coloured edit and delete buttons to draw the eye's attention.
 A welcome card on the left provides a brief summary of the what the site is about, and also invites visitors to add their own pun to the collection.
 
-![](/images/Milestone 3 Wireframes Form Pages.png)
+![](/images/wirerames-forms.png)
 
 A basic form allows the user to input their own strings of text,
 while the dropdown allows them to select from one of four possible categories; adjective, adverb, noun, or verb.
