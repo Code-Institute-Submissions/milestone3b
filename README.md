@@ -20,9 +20,9 @@ and in the "About" Card.
 
 ### User Stories:
 
-    As a fan of puns, I want to view others' puns, so that I can sprinkle them into my day-to-day conversations.
-    As a pun-skeptic, I want to view others' puns, so that I can audibly groan and roll my eyes in disgust.
-    As a particularly witty wordsmith, I want to upload my play on words, so that I can demonstrate my mastery of the English language.
+* As a fan of puns, I want to view others' puns, so that I can sprinkle them into my day-to-day conversations.
+* As a pun-skeptic, I want to view others' puns, so that I can audibly groan and roll my eyes in disgust.
+* As a particularly witty wordsmith, I want to upload my play on words, so that I can demonstrate my mastery of the English language.
 
 ### Wireframes:
 
@@ -43,46 +43,46 @@ This was made a dropdown to help avoid confusion.
 
 ### Existing Features
 
-    Accordion display of puns [READ]
-        an interactive display of the site's repository of puns, that neatly allows users to view available content,
-        while organising it in such a way as to not overburden the visual field.
-    Navbar
-        lists links to both the home page (display of puns), and the submit page.
-    About Card
-        gives brief description of site's purpose to new visitors, also encourages them to submit their own pun
-    Individual pun page
-        visitors can click on "view more" when a pun is expanded in the accordion to be brough to a separate page 
-        with less visual clutter and a clearer breakdown of the components to the pun.
-    Submit Page [CREATE]
-        a simple form that allows users to add their own puns to the repository
-    Edit Page [UPDATE]
-        using the same form as the submit page, allows users to update and amend any existing puns
-    Edit and Delete buttons [DELETE]
-        visible on both the home page and individual pun pages, allows users access to either the edit page, or to
-        delete the particular pun from the repository
+* Accordion display of puns [READ]
+    an interactive display of the site's repository of puns, that neatly allows users to view available content,
+    while organising it in such a way as to not overburden the visual field.
+* Navbar
+    lists links to both the home page (display of puns), and the submit page.
+* About Card
+    gives brief description of site's purpose to new visitors, also encourages them to submit their own pun
+* Individual pun page
+    visitors can click on "view more" when a pun is expanded in the accordion to be brough to a separate page 
+    with less visual clutter and a clearer breakdown of the components to the pun.
+* Submit Page [CREATE]
+    a simple form that allows users to add their own puns to the repository
+* Edit Page [UPDATE]
+    using the same form as the submit page, allows users to update and amend any existing puns
+* Edit and Delete buttons [DELETE]
+    visible on both the home page and individual pun pages, allows users access to either the edit page, or to
+    delete the particular pun from the repository
 
 ### Features Left to Implement
 
-    Error messages for the submission of incomplete forms
-    Password protection to prevent rampant deletion, or hostile edits
-    5-star rating system, allowing users to provide feedback for each pun
-    Modal message asking users to confirm that they wish to delete a pun
-    Filtering system to show sub-collections by category
+* Error messages for the submission of incomplete forms
+* Password protection to prevent rampant deletion, or hostile edits
+* 5-star rating system, allowing users to provide feedback for each pun
+* Modal message asking users to confirm that they wish to delete a pun
+* Filtering system to show sub-collections by category
 
 ### Technologies Used
 
-    JQuery
-        The project uses JQuery to simplify DOM manipulation.
-    HTML
-        Used to put a basic structure on the web pages
-    CSS
-        Used to customize formatting and stylistic choices
-    Python
-        Allows for greater generalization in generating pages, avoiding unnecessary duplication by instead using templates
-    Bootstrap
-        For styling, layout
-    Materialize
-        For styling purposes, and some simple functionality, specifically the accordion, and dropdown-selector
+* JQuery
+    The project uses JQuery to simplify DOM manipulation.
+* HTML
+    Used to put a basic structure on the web pages
+* CSS
+    Used to customize formatting and stylistic choices
+* Python
+    Allows for greater generalization in generating pages, avoiding unnecessary duplication by instead using templates
+* Bootstrap
+    For styling, layout
+* Materialize
+    For styling purposes, and some simple functionality, specifically the accordion, and dropdown-selector
     
 ## Testing
 
@@ -91,10 +91,10 @@ Links/buttons were tested to ensure they redirected to the correct pages.
 Forms were tested to ensure that values were being correctly updated on mongoDB.
 
 ### Known Bugs
-    no spacing between Welcome card and Pun accordion
+* no spacing between Welcome card and Pun accordion
 
 ### Fixed Bugs
-    pun category dropdown does not display correctly on Edit page
+* pun category dropdown does not display correctly on Edit page
 
 ## Deployment
 
