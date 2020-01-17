@@ -43,21 +43,21 @@ This was made a dropdown to help avoid confusion.
 
 ### Existing Features
 
-* Accordion display of puns [READ]
+* Accordion display of puns [READ]  
     an interactive display of the site's repository of puns, that neatly allows users to view available content,
     while organising it in such a way as to not overburden the visual field.
-* Navbar
+* Navbar  
     lists links to both the home page (display of puns), and the submit page.
-* About Card
+* About Card  
     gives brief description of site's purpose to new visitors, also encourages them to submit their own pun
-* Individual pun page
+* Individual pun page  
     visitors can click on "view more" when a pun is expanded in the accordion to be brough to a separate page 
     with less visual clutter and a clearer breakdown of the components to the pun.
-* Submit Page [CREATE]
+* Submit Page [CREATE]  
     a simple form that allows users to add their own puns to the repository
-* Edit Page [UPDATE]
+* Edit Page [UPDATE]  
     using the same form as the submit page, allows users to update and amend any existing puns
-* Edit and Delete buttons [DELETE]
+* Edit and Delete buttons [DELETE]  
     visible on both the home page and individual pun pages, allows users access to either the edit page, or to
     delete the particular pun from the repository
 
@@ -71,17 +71,17 @@ This was made a dropdown to help avoid confusion.
 
 ### Technologies Used
 
-* JQuery
+* JQuery  
     The project uses JQuery to simplify DOM manipulation.
-* HTML
+* HTML  
     Used to put a basic structure on the web pages
-* CSS
+* CSS  
     Used to customize formatting and stylistic choices
-* Python
+* Python  
     Allows for greater generalization in generating pages, avoiding unnecessary duplication by instead using templates
-* Bootstrap
+* Bootstrap  
     For styling, layout
-* Materialize
+* Materialize  
     For styling purposes, and some simple functionality, specifically the accordion, and dropdown-selector
     
 ## Testing
@@ -98,7 +98,7 @@ Forms were tested to ensure that values were being correctly updated on mongoDB.
 
 ## Deployment
 
-This project is deployed on Heroku, and can be visited at the following url: 
+This project is deployed on Heroku, and can be visited at the following url:  
     https://suburban-dictionary-project.herokuapp.com/
 
 A development version was hosted on gitpod. 
