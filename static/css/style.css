@@ -12,12 +12,9 @@ nav{
     margin-bottom: 0px;
 }
 
-.switch>label{
-    color:black;
-    font-weight: bold;
-    font-size: 0.9em;
+#welcome{
+    margin-right:15px;
 }
-
 .collapsible{
     padding: 0px;
 }
@@ -33,7 +30,7 @@ nav{
 
 .btn_small {
     height: 24px;
-    width: 70px;
+    width: 80px;
     line-height: 24px;
     margin: 5px 5px;
     padding: 0 0.5em;

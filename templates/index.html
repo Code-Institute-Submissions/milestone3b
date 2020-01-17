@@ -2,7 +2,7 @@
 {% block content %}
 
 <div class="row">
-<div class="row col-sm-12 col-md-4 col-lg-4">
+<div id="welcome" class="row col-sm-12 col-md-4 col-lg-4">
 	<div class="col s12 m6">
 		<div class="card white darken-1">
 			<div class="card-content">
@@ -12,46 +12,9 @@
            Why not add to the fun and submit your own pun here?</p>
 			</div>
 			<div class="card-action">
-				<a class="edit waves-effect waves-light btn btn_small green" href="{{url_for('add_pun')}}">Submit</a>
+				<a class="edit waves-effect waves-light btn green" href="{{url_for('add_pun')}}">Add a Pun</a>
 			</div>
 		</div>
-		<div class="row filter">
-            <div id="all-slider" data-filter="all" class="switch col-xs-6 col-sm-6 col-md-12 col-lg-12">
-			    <label>  
-                <input type="checkbox" checked>
-                <span class="lever"></span>
-                    All
-                </label>
-            </div>
-            <div id="adjectives-slider" data-filter="adjective" class="switch col-xs-6 col-sm-6 col-md-12 col-lg-12">
-			    <label>  
-                <input type="checkbox">
-                <span class="lever"></span>
-                    Adjectives
-                </label>
-            </div>
-            <div id="adverbs-slider" data-filter="adverb" class="switch col-xs-6 col-sm-6 col-md-12 col-lg-12">
-                <label>
-                <input type="checkbox">
-                <span class="lever"></span>
-                    Adverbs
-                </label>
-            </div>
-            <div id="nouns-slider" data-filter="noun" class="switch col-xs-6 col-sm-6 col-md-12 col-lg-12">
-                <label>  
-                <input type="checkbox">
-                <span class="lever"></span>
-                    Nouns
-                </label>
-            </div>
-            <div id="verbs-slider" data-filter="verb" class="switch col-xs-6 col-sm-6 col-md-12 col-lg-12">
-                <label> 
-                <input type="checkbox">
-                <span class="lever"></span>
-                    Verbs
-                </label>
-            </div>
-        </div>
 	</div>
 </div>
 

@@ -17,7 +17,7 @@
 			<a href="{{url_for('get_puns')}}" class="brand-logo">SuburbanDictionary</a>
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
 				<li><a href="{{url_for('get_puns')}}">Home</a></li>
-				<li><a href="{{url_for('add_pun')}}">Submit</a></li>
+				<li><a href="{{url_for('add_pun')}}">Add a Pun</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -32,40 +32,8 @@
         $(document).ready(function(){
             $('.collapsible').collapsible();
             $('select').material_select();
-            $('.modal').modal();
         });
     </script>
-    <script>
-        (function($){
-            'use strict';
-
-            var $filters = $('.filter[data-filter]'),
-                $pun = $('.pun[data-category]');
-            
-            $filters.on('click', function(e){
-                e.preventDefault();
-                var $this = $(this);
-
-                $filters.removeClass('active');
-                $this.addClass('active');
-
-                var $filterCategory = $this.attr('data-filter');
-
-                if ($filterCategory='all'){
-                    $pun.removeClass('is-animated')
-                    .fadeOut().promise().done(function(){
-                        $pun.addClass('is-animated').fadeIn();
-                    });
-                } else{
-                    $pun.removeClass('is-animated')
-                    .fadeOut().promise().done(function(){
-                        $pun.filter('[data-category = "' + $filterCategory + '"]')
-                        .addClass('is-animated').fadeIn();
-                    });
-                }
-            });
-        })(jQuery);
-</script>
 </body>
 
 </html>
