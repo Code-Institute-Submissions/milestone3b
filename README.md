@@ -9,7 +9,7 @@ that they feel are of an (in)sufficient embarrassment quotient.
 
 In this way I hope to demonstrate my ability to CRUD using a database of user-generated puns.
 
-##UX
+## UX
 
 For all paternal-types or paternal-at-heart, I hope to have created a space for uers to upload and peruse the best 
 puns and play on words they can find. I'm using a simple, interactive layout, to help draw the eye's attention to one 
@@ -18,27 +18,30 @@ expression at a time while still displaying the other possible puns for users to
 I also have several calls to action on the home screen for users to upload they're own turns of phrases, in the navbar
 and in the "About" Card.
 
-###User Stories:
+### User Stories:
 
     As a fan of puns, I want to view others' puns, so that I can sprinkle them into my day-to-day conversations.
     As a pun-skeptic, I want to view others' puns, so that I can audibly groan and roll my eyes in disgust.
     As a particularly witty wordsmith, I want to upload my play on words, so that I can demonstrate my mastery of the English language.
 
-###Wireframes:
+### Wireframes:
+
 ![](/images/Milestone 3 Wireframes Index Page.png)
+
 Here I've gone for a simple, clean layout using the materialize framework
 Puns are displayed list-wise in an accordion format, hat expands to display a defintion and example.
 There are also boldly-coloured edit and delete buttons to draw the eye's attention.
 A welcome card on the left provides a brief summary of the what the site is about, and also invites visitors to add their own pun to the collection.
 
 ![](/images/Milestone 3 Wireframes Form Pages.png)
+
 A basic form allows the user to input their own strings of text,
 while the dropdown allows them to select from one of four possible categories; adjective, adverb, noun, or verb.
 This was made a dropdown to help avoid confusion.
 
-##Features
+## Features
 
-###Existing Features
+### Existing Features
 
     Accordion display of puns [READ]
         an interactive display of the site's repository of puns, that neatly allows users to view available content,
@@ -58,7 +61,7 @@ This was made a dropdown to help avoid confusion.
         visible on both the home page and individual pun pages, allows users access to either the edit page, or to
         delete the particular pun from the repository
 
-###Features Left to Implement
+### Features Left to Implement
 
     Error messages for the submission of incomplete forms
     Password protection to prevent rampant deletion, or hostile edits
@@ -66,7 +69,7 @@ This was made a dropdown to help avoid confusion.
     Modal message asking users to confirm that they wish to delete a pun
     Filtering system to show sub-collections by category
 
-###Technologies Used
+### Technologies Used
 
     JQuery
         The project uses JQuery to simplify DOM manipulation.
@@ -81,19 +84,19 @@ This was made a dropdown to help avoid confusion.
     Materialize
         For styling purposes, and some simple functionality, specifically the accordion, and dropdown-selector
     
-##Testing
+## Testing
 
 Testing was caried out on multiple browsers, includin Chrome, Firefox and Explorer, at multiple resolutions to ensure that formatting remained consistent.
 Links/buttons were tested to ensure they redirected to the correct pages.
 Forms were tested to ensure that values were being correctly updated on mongoDB.
 
-###Known Bugs
+### Known Bugs
     no spacing between Welcome card and Pun accordion
 
-###Fixed Bugs
+### Fixed Bugs
     pun category dropdown does not display correctly on Edit page
 
-##Deployment
+## Deployment
 
 This project is deployed on Heroku, and can be visited at the following url: 
     https://suburban-dictionary-project.herokuapp.com/
